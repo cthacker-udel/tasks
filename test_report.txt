@@ -21,6 +21,24 @@ PASS src/HtmlCss.test.tsx
       at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
       at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:22707:5)
 
+FAIL src/functions.test.ts
+  ● Testing the basic functions › Testing the convertYesNo function
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: null
+    Received: false
+
+      53 |         expect(convertYesNo("Apple")).toBe(null);
+      54 |         expect(convertYesNo("Bananas")).toBe(null);
+    > 55 |         expect(convertYesNo("Nope")).toBe(null);
+         |                                      ^
+      56 |         expect(convertYesNo("Yesterday")).toBe(null);
+      57 |         expect(convertYesNo("Maybe")).toBe(null);
+      58 |     });
+
+      at Object.<anonymous> (src/functions.test.ts:55:38)
+
 PASS src/text.test.tsx
   ● Console
 
@@ -59,15 +77,16 @@ PASS src/App.test.tsx
       at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
       at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:22707:5)
 
-----------|---------|----------|---------|---------|-------------------
-File      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
-----------|---------|----------|---------|---------|-------------------
-All files |     100 |      100 |     100 |     100 |                   
- App.tsx  |     100 |      100 |     100 |     100 |                   
-----------|---------|----------|---------|---------|-------------------
+--------------|---------|----------|---------|---------|-------------------
+File          | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+--------------|---------|----------|---------|---------|-------------------
+All files     |     100 |      100 |     100 |     100 |                   
+ App.tsx      |     100 |      100 |     100 |     100 |                   
+ functions.ts |     100 |      100 |     100 |     100 |                   
+--------------|---------|----------|---------|---------|-------------------
 
-Test Suites: 3 passed, 3 total
-Tests:       9 passed, 9 total
+Test Suites: 1 failed, 3 passed, 4 total
+Tests:       1 failed, 13 passed, 14 total
 Snapshots:   0 total
-Time:        2.795 s
+Time:        3.886 s
 Ran all test suites.
